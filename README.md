@@ -29,3 +29,8 @@ $ ./deepconfusion path/to/package.json
 - Publish it in the npm public registry
 
 Help: https://s1rn3tz.gitbook.io/notes/pentest-web/dependency-confusion
+
+## To Do
+
+- Addisionnal validation for depreciated packages
+- Remove of false positives like (name, version...)
