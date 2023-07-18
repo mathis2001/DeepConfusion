@@ -26,10 +26,13 @@ $ ./deepconfusion path/to/package.json
 
 ## Exploit (After finding a private module)
 
-- Take the package.json template
-- Replace the name and preinstall value
-- Replace the version value by a latest than the private module
-- Publish it in the npm public registry
+You can find the private packages found in the generated confusion.txt file, then:
+
+- Check in the original package.json file if their is a ^ or a ~ before the version (if yes it is vulnerable)
+- Take the package.json template.
+- Replace the name by one of the packages found and preinstall value by your domain.
+- Replace the version value by a latest than the private module.
+- Publish it in the npm public registry.
 
 Help: https://s1rn3tz.gitbook.io/notes/pentest-web/dependency-confusion
 
