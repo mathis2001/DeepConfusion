@@ -29,7 +29,7 @@ $ ./deepconfusion path/to/package.json
 You can find the private packages found in the generated confusion.txt file, then:
 
 - Check in the original package.json file if their is a ^ or a ~ before the version (if yes it is vulnerable)
-- Take the package.json template.
+- Take the package.json template prensent in the "ExploitFiles" directory.
 - Replace the name by one of the packages found and preinstall value by your domain.
 - Replace the version value by a latest than the private module.
 - Publish it in the npm public registry.
