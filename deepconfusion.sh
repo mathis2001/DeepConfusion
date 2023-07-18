@@ -6,12 +6,12 @@ YELLOW='\033[0;33m'
 RESET='\033[0m'
 
 if [ $# -eq 0 ]; then
-    echo "Usage: $0 <package.json>"
+    echo -e "${RED}[!]${RESET} Usage: $0 <package.json>"
     exit 1
 fi
 
 if [ ! -f "$1" ]; then
-    echo "Error: File '$1' not found."
+    echo -e "${RED}[!]${RESET} Error: File '$1' not found."
     exit 1
 fi
 
