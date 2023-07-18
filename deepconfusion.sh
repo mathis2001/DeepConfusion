@@ -24,7 +24,11 @@ for package_name in "${package_names[@]}"; do
     
     if [ -z "$matching_package" ]; then
         echo -e "${RED}[!]${RESET} $package_name ${RED}NOT${RESET} in public registry !"
-	echo $package_name >> confusion.txt
+	if curl -s https://www.npmjs.com/package/$package_name | grep -q 'no longer maintained'; then
+	    echo -e "${YELLOW}[-]${RESET} Here but ${YELLOW}deprecated${RESET}"
+	else
+	    echo $package_name >> confusion.txt
+	fi
     else
         echo -e "${GREEN}[+]${RESET} $package_name in public registry."
     fi
