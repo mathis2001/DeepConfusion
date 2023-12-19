@@ -26,6 +26,7 @@ $ ./deepconfusion path/to/package.json or requirements.txt
 
 ## Exploit (After finding a private module)
 
+### npm
 You can find the private packages found in the generated confusion.txt file, then:
 
 - Check in the original package.json file if their is a ^ or a ~ before the version (if yes it is vulnerable)
@@ -33,6 +34,10 @@ You can find the private packages found in the generated confusion.txt file, the
 - Replace the name by one of the packages found and preinstall value by your domain.
 - Replace the version value by a latest than the private module.
 - Publish it in the npm public registry.
+
+### Python
+
+- If one of the packages give an error 404, it might be vulnerable to dependency confusion.
 
 Help: https://s1rn3tz.gitbook.io/notes/pentest-web/dependency-confusion
 
