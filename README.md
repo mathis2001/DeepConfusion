@@ -38,6 +38,16 @@ You can find the private packages found in the generated confusion.txt file, the
 ### Python
 
 - If one of the packages give an error 404, it might be vulnerable to dependency confusion.
+- Go to the "ExploitPy" repository and build the package.
+  
+```bash
+$ python3 setup.py sdist bdist_wheel
+```
+- Upload the file in https://pypi.org.
+  
+```bash
+$ twin upload dist/*
+``` 
 
 Help: https://s1rn3tz.gitbook.io/notes/pentest-web/dependency-confusion
 
