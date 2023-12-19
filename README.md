@@ -1,5 +1,5 @@
 # DeepConfusion
-Simple bash dependency confusion checker that parse package.json files and check if npm packages are public or private by searching them in npm public registry.
+Simple bash dependency confusion checker that parse package.json and requirements.txt files and check if npm or python packages are public or private by searching them in npm and pypi public registry.
 
 ## Prerequisites
 
@@ -16,7 +16,7 @@ $ chmod +x deepconfusion.sh
 
 ## Usage:
 ```bash
-$ ./deepconfusion path/to/package.json
+$ ./deepconfusion path/to/package.json or requirements.txt
 ```
 ## Screenshots
 
@@ -40,4 +40,4 @@ Help: https://s1rn3tz.gitbook.io/notes/pentest-web/dependency-confusion
 
 - ~~Addisionnal validation for depreciated packages~~
 - Remove of false positives like (name, version...)
-- Add requirements.txt check for python dependency confusion
+- ~~Add requirements.txt check for python dependency confusion~~
