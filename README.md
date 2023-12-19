@@ -6,6 +6,13 @@ Simple bash dependency confusion checker that parse package.json and requirement
 - npm
 - jq
 - curl
+- awk
+- sort
+- sed
+- tr
+- cut
+- xargs
+- httpx
   
 ## Install:
 ```bash
