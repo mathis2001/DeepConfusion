@@ -61,12 +61,12 @@ Help: https://s1rn3tz.gitbook.io/notes/pentest-web/dependency-confusion
 ### Ruby
 
 - If one of the packages give an error 404, it might be vulnerable to dependency confusion.
-- Publish the package on https://rubygems.org.
+- Create a new package.
     
 ```bash
 $ bundle gem <package_name>
 ```
-- Go to the created file.
+- Go to the created repository.
     
 ```bash
 $ cd <package_name>
