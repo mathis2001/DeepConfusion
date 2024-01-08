@@ -58,7 +58,21 @@ elif [ "$file_extension" == "txt" ]; then
     | xargs -n1 -I{} echo "https://pypi.org/project/{}/" \
     | httpx -status-code -silent
 
+elif [ "$(basename $1)" == "Gemfile" ]; then
+    if [ ! -f "$1" ]; then
+        echo -e "${RED}[!]${RESET} Error: File '$1' not found."
+        exit 1
+    fi
+
+    cat "$1" \
+    | awk '{print $1S;}' \
+    | tr -d '"' \
+    | tr -d ",'" \
+    | sort -u \
+    | xargs -n1 -I{} echo "https://rubygems.org/gems/{}" \
+    | httpx -status-code -silent
+
 else
-    echo -e "${RED}[!]${RESET} Unsupported file extension. Only ${GREEN}JSON${RESET} and ${GREEN}TXT${RESET} files are supported."
+    echo -e "${RED}[!]${RESET} Unsupported file extension. Only ${GREEN}JSON${RESET}, ${GREEN}TXT${RESET} and ${GREEN}Gemfile${RESET} files are supported."
     exit 1
 fi
